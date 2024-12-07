@@ -1,0 +1,23 @@
+@use 'variaveis';
+
+.hero__content__btn__loguin{
+    height: 60px;
+    display: block;
+    width: 120px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    background-color: variaveis.$corDeFundo;
+    color: variaveis.$corTextoSecundario;
+    text-transform: uppercase;
+    border: 1px solid variaveis.$corTextoSecundario;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius:4px;
+}
+
+.hero__content__btn__loguin:hover{
+    background-color: variaveis.$corTextoSecundario;
+    color: variaveis.$corDeFundo;
+    
+}
