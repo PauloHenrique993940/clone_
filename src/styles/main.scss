@@ -2,17 +2,29 @@
 @use 'hero';
 @use 'header';
 
+@font-face {
+    font-family:Alumni ;
+    src: url(../fonts/Alumni_Sans/AlumniSans-Italic-VariableFont_wght.ttf);
+    font-weight: 400;
+}
 
+@font-face {
+    font-family:Alumni ;
+    src: url(../fonts/Alumni_Sans/AlumniSans-VariableFont_wght.ttf);
+    font-weight: 700;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
 body{
     background-color: variaveis.$corDeFundo;
+    font-family: Alumni, sans-serif;
 }
 
 @mixin text($fontSize: 16px){
