@@ -9,7 +9,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
         margin-top: 44px;
-        display: none;
 
         &--is-active{
             display: grid;
@@ -43,14 +42,11 @@
             border-bottom: 5px solid variaveis.$corTextoSecundario;
             background: none;
             border: none;
-            margin: 1vh;
-            padding-bottom: 5px;
             font-family: "Roboto", serif;
         }
         &__button:hover{
             cursor: underline;
             color: red;
-            border-bottom: 5px solid red;
         }
         .btn__active__active{
             color: variaveis.$corTextoSecundario;
@@ -68,6 +64,11 @@
         }
         
     }
+    .shows__list__item__display{
+        display: none;
+
+    }
+    
 
     
 

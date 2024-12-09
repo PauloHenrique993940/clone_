@@ -1,23 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('[data-tab-button]');
-    
+// Seleciona todos os botões e as listas
+const buttons = document.querySelectorAll('.shows__tabs__button');
+const lists = document.querySelectorAll('.shows__list');
 
-    for (let i = 0; i < buttons.length; i++ ){
-        buttons[i].addEventListener('click', function(btn) {
-            const abaAlvo = btn.target.dataset.tabButton;
-            const aba = document.querySelector(`[data-tab-id=${abaAlvo}]`)
-            escondeTodasAbas();
-            aba.classList.add('shows__list--is-active');
+// Função para exibir a lista correspondente ao botão clicado
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
+        const targetTab = button.getAttribute('data-tab-button'); // Obtém o valor de data-tab-button
 
-        })
-    }
+        // Alterna a classe 'btn__active' nos botões
+        buttons.forEach(btn => btn.classList.remove('btn__active'));
+        button.classList.add('btn__active');
 
-})
-
-function escondeTodasAbas() {
-    const tabsContainer = document.querySelectorAll('[data-tab-id]');
-    for (let i = 0; i< tabsContainer.length; i++){
-        tabsContainer[i].classList.remove('shows__list--is-active');
-    }
-
-}
+        // Exibe a lista correspondente e oculta as outras
+        lists.forEach(list => {
+            if (list.getAttribute('data-tab-id') === targetTab) {
+                list.style.display = 'grid'; // Exibe a lista correspondente
+            } else {
+                list.style.display = 'none'; // Oculta as outras listas
+            }
+        });
+    });
+});
