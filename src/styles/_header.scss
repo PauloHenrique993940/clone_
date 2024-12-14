@@ -16,9 +16,15 @@
     border-radius:4px;
 }
 
-.hero__content__btn__loguin:hover{
-    background-color: variaveis.$corTextoSecundario;
-    color: variaveis.$corDeFundo;
-    
-}
 
+
+header{
+    a{
+        text-decoration: none;
+        color: variaveis.$codTextoPrincipal;
+    }
+
+    a:hover{
+        color: blue;
+    }
+}

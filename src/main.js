@@ -1,4 +1,4 @@
-// Seleciona todos os botões e as listas
+// Seleciona todos os botões e as listas para as abas
 const buttons = document.querySelectorAll('.shows__tabs__button');
 const lists = document.querySelectorAll('.shows__list');
 
@@ -13,16 +13,13 @@ buttons.forEach(button => {
 
         // Exibe a lista correspondente e oculta as outras
         lists.forEach(list => {
-            if (list.getAttribute('data-tab-id') === targetTab) {
-                list.style.display = 'grid'; // Exibe a lista correspondente
-            } else {
-                list.style.display = 'none'; // Oculta as outras listas
-            }
+            list.style.display = list.getAttribute('data-tab-id') === targetTab ? 'grid' : 'none';
         });
     });
 });
 
-document.querySelectorAll('.&__button, .btn__active__active').forEach(button => {
+// Adiciona efeito visual de hover nos botões
+document.querySelectorAll('.faq__toggle-button, .btn__active__active').forEach(button => {
     button.addEventListener('mouseover', () => {
         button.style.borderBottom = '5px solid red'; // Altera a cor da borda
         button.style.color = 'red'; // Altera a cor do texto
@@ -33,3 +30,22 @@ document.querySelectorAll('.&__button, .btn__active__active').forEach(button => 
         button.style.color = 'var(--corTextoSecundario)'; // Restaura a cor do texto
     });
 });
+
+document.querySelectorAll('.faq__questions__item').forEach(item => {
+    const question = item.querySelector('.faq__questions__item__question');
+    const answer = item.querySelector('.faq__questions__item__answer');
+    const toggleButton = item.querySelector('.faq__toggle-button');
+
+    question.addEventListener('click', () => {
+        // Alternar visibilidade da resposta
+        const isVisible = answer.classList.contains('open');
+        answer.classList.toggle('open', !isVisible);
+
+        // Alternar texto do botão (+/-)
+        toggleButton.textContent = isVisible ? '+' : '-';
+    });
+});
+
+
+
+
