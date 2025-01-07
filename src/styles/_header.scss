@@ -87,3 +87,32 @@
 .header__links__item{
     transition: opacity .5s ease;
 }
+
+
+@media (max-width: 320px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+
+    .header__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button__event{
+        background-color: $corFundoButtonCombos;
+        width: 150px;
+        padding: 0;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .header__container__logo{
+        width: 100%;
+    }
+}

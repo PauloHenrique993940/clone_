@@ -54,6 +54,37 @@
   background-color: #096c8a;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("/src/images/hero_tablet.jpg");
+    width: 100%;
+    background-position: center;
+  }
+}
+@media (max-width: 320px) {
+  .hero {
+    background-image: url("/src/images/hero_celular.jpeg");
+    width: 100%;
+    background-size: cover; /* Adjusts the background image */
+    background-position: center; /* Centers the image */
+  }
+  .hero__content {
+    width: 100%;
+    padding: 10px; /* Adds some spacing for smaller screens */
+    text-align: center;
+  }
+  .hero__content__combos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__content__combos__combo img {
+    width: 100%;
+    display: flex;
+  }
+}
 .header {
   margin-bottom: 8px;
   position: sticky;
@@ -136,6 +167,29 @@
   transition: opacity 0.5s ease;
 }
 
+@media (max-width: 320px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .button__event {
+    background-color: #02d6e8;
+    width: 150px;
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  .header__container__logo {
+    width: 100%;
+  }
+}
 .shows {
   padding: 2vw 5.6vw;
   margin-bottom: 40vh;
@@ -144,6 +198,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
   margin-top: 44px;
+}
+@media (max-width: 768px) {
+  .shows__list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .shows__list--is-active {
   display: grid;
@@ -193,6 +252,14 @@
   display: none;
 }
 
+@media (max-width: 320px) {
+  .shows {
+    justify-content: space-between;
+  }
+  .shows__tabs__button {
+    font-size: 12px;
+  }
+}
 .plans {
   padding: 2vw 5.6vw;
 }
@@ -203,6 +270,13 @@
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .plans__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .plans__list__item {
   text-align: center;
@@ -245,6 +319,16 @@
   background-color: #02d6e8;
 }
 
+@media (max-width: 320px) {
+  .plans__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .plans__list__item img {
+    width: 100%;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -339,6 +423,21 @@ table {
   margin-bottom: 24px;
 }
 
+@media (max-width: 768px) {
+  .walpaper {
+    display: block;
+    padding-left: 6%;
+  }
+}
+@media (max-width: 320px) {
+  .walpaper {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/src/images/fundo_rei_leao_celular.png");
+    width: 100%;
+    height: auto;
+  }
+}
 .dispositivos {
   padding: 5.6vw;
 }
@@ -365,6 +464,12 @@ table {
   max-width: 100%;
 }
 
+@media (max-width: 768px) {
+  .dispositivos__itens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .faq {
   padding: 6.5vw;
   margin: 0 auto;
@@ -500,6 +605,18 @@ table {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container__text p {
+    text-align: justify;
+    width: 100%;
+  }
+}
 @font-face {
   font-family: Alumni;
   src: url(../fonts/Alumni_Sans/AlumniSans-Italic-VariableFont_wght.ttf);
@@ -573,4 +690,11 @@ body {
   color: silver;
   color: #f9f9f9;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .watch-anywhere {
+    display: block;
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

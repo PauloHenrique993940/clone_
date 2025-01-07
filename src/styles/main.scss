@@ -82,3 +82,10 @@ body{
     text-decoration: underline;
 
 }
+
+.watch-anywhere{
+    @media (max-width: 768px) {
+        display: block;
+        width: 100%;
+    }
+}

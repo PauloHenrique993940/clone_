@@ -4,7 +4,7 @@
     min-height: 80vh;
     background-image: url(/src/images/hero_desktop.jpeg);
     text-align: center;
-    background-size: cover;    
+    background-size: cover;  
 
     .hero__content__btn__loguin{
         float: right;
@@ -69,4 +69,43 @@
         }
 
     }
+}
+
+
+@media (max-width:  768px){
+    .hero{
+        background-image: url('/src/images/hero_tablet.jpg');
+        width: 100%;
+        background-position: center;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .hero {
+        background-image: url('/src/images/hero_celular.jpeg');
+        width: 100%;
+        background-size: cover; /* Adjusts the background image */
+        background-position: center; /* Centers the image */
+    }
+    .hero__content {
+        width: 100%;
+        padding: 10px; /* Adds some spacing for smaller screens */
+        text-align: center;
+    }
+
+    .hero__content__combos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__content__combos__combo img{
+        width: 100%;
+        display: flex;
+        
+    }
+    
 }

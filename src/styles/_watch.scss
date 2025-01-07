@@ -42,3 +42,21 @@
         margin-bottom: 24px;
     }
 }
+
+@media (max-width: 768px) {
+    .walpaper{
+        display: block;
+        padding-left: 6%;
+    }
+}
+
+
+@media (max-width: 320px){
+    .walpaper{
+        display: flex;
+        flex-direction: column;
+        background-image: url('/src/images/fundo_rei_leao_celular.png');
+        width: 100%;
+        height: auto;
+    }
+}

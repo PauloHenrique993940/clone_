@@ -62,3 +62,18 @@
     text-align: center;
 }
 
+
+@media (max-width: 768px){
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container__text p{
+        text-align: justify;
+        width: 100%;
+        
+    }
+}
