@@ -1,30 +1,26 @@
-@use 'variaveis';
+@use "variaveis";
 
-.hero__content__btn__loguin{
-    height: 60px;
-    display: block;
-    width: 120px;
-    float: right;
-    margin-top: 10px;
-    margin-right: 60px;
-    background-color: variaveis.$corDeFundo;
-    color: variaveis.$corTextoSecundario;
-    text-transform: uppercase;
-    border: 1px solid variaveis.$corTextoSecundario;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius:4px;
+.header {
+    
+}
+
+.header__container {
+    display: flex;
+    padding: 8px 36px;
+    justify-content: space-between;
+}
+
+.header__container__logo {
+    width: 100px;
+}
+.header__links{
+    display: flex;
 }
 
 
-
-header{
-    a{
-        text-decoration: none;
-        color: variaveis.$codTextoPrincipal;
-    }
-
-    a:hover{
-        color: blue;
-    }
+.button {
+    width: 300px;
+    background-color: $corDeFundo;
+    color: $codTextoPrincipal;
+    height: 60px;
 }
