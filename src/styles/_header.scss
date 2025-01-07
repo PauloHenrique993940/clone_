@@ -1,26 +1,88 @@
-@use "variaveis";
+@use "_variaveis" as *;
 
 .header {
-    
+    margin-bottom: 8px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $corDeFundo;
+    transition: background-color .5s ease;
+
+    &--is-hidden{
+        background-color: transparent;
+        .header{
+            &__logo, &__links__item:first-child{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .header__logo{
+            opacity: 0;
+        }
+
+        .header__links__item:first-child{
+            opacity: 0;
+
+        }
+    }
 }
 
 .header__container {
     display: flex;
     padding: 8px 36px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header__container__logo {
-    width: 100px;
-}
-.header__links{
-    display: flex;
+    max-width: 100px;
+    width: 100%;
+    margin: 5px;
+    transition: opacity .5s ease;
 }
 
+.header__links {
+    display: flex;
+    gap: 10px;
+}
 
 .button {
-    width: 300px;
-    background-color: $corDeFundo;
-    color: $codTextoPrincipal;
-    height: 60px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    background-color: #040714;
+    color: $corTextoSecundario;
+    border: 1px solid $codTextoPrincipal;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+
+}
+
+.dark{
+    background-color: rgba($color: #000, $alpha: 0.8);
+    border-color: $corTextoSecundario;
+    
+}
+.button:hover{
+    background-color: rgb(187, 184, 184);
+    color: #000000;
+}
+.button__event{
+    background-color: $corFundoButtonCombos;
+}
+
+.button__event:hover{
+    background-color: #0569ec;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.header__links__item{
+    transition: opacity .5s ease;
 }

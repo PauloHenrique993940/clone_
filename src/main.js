@@ -1,6 +1,32 @@
 // Seleciona todos os botões e as listas para as abas
 const buttons = document.querySelectorAll('.shows__tabs__button');
 const lists = document.querySelectorAll('.shows__list');
+const heroSection = document.querySelector('.hero');
+const alturahero = heroSection.clientHeight;
+
+window.addEventListener('scroll', function(){
+    const positionAtual = this.window.scrollY;
+
+    if(positionAtual < alturahero){
+        ocultaElementoDoHeader();
+
+    }else{
+        exibeElementosDoHeader();
+    }
+
+    
+    
+
+})
+
+function ocultaElementoDoHeader(){
+    const header = document.querySelector('.header');
+    header.classList.add('header--is-hidden');
+}
+function exibeElementosDoHeader(){
+    const header = document.querySelector('.header');
+    header.classList.remove('header--is-hidden');
+}
 
 // Função para exibir a lista correspondente ao botão clicado
 buttons.forEach(button => {
