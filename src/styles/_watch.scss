@@ -1,53 +1,62 @@
-.watch-anywhere{
-    padding:  5.6vw;
+.watch-anywhere {
+    padding: 5.6vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    img{
+    img {
         max-width: 100%;
     }
 
-    .watch-anywhere__text_container{
+    .watch-anywhere__text_container {
         padding: 0 2vw;
 
-        h2{
+        h2 {
             margin-bottom: 24px;
         }
     }
 }
 
-.walpaper{
-    padding:  5.6vw;
+.walpaper {
+    padding: 5.6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 50%;
-    
+
     align-items: center;
     background-image: url(/src/images/fundo_rei_leao.png);
     height: 60vw;
 
-    img{
+    img {
         width: 100%;
     }
 }
 
-.watch-anywhere__text_container__walpaper{
+.watch-anywhere__text_container__walpaper {
     float: right;
-    p{
+
+    p {
         width: calc(100% - 5.6vw);
     }
-    h2{
+
+    h2 {
         margin-bottom: 24px;
     }
 }
 
 @media (max-width: 768px) {
-    .walpaper{
+    .walpaper {
         display: block;
         background-image: url('/src/images/fundo_rei_leao.png');
+        padding-left: 0;
+        padding: 5.6vw;
+        height: 80vh;
+        width: 100%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+
     }
 }
-
-

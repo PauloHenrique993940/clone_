@@ -65,15 +65,19 @@
 
 @media (max-width: 768px){
     .container{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+        display: block;
         width: 100%;
+    }
+    .container__text{
+        padding-top: 20vh;
+        display: flex;
+        width:100%;
+
     }
 
     .container__text p{
         text-align: justify;
-        width: 100%;
-        
     }
+
+   
 }

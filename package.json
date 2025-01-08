@@ -1,27 +1,40 @@
 {
-  "name": "disneyplus",
+  "name": "disneyplus-clone",
   "version": "1.0.0",
+  "description": "Clone da interface do Disney+ com Gulp e automação de tarefas",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp watch",
+    "dev": "gulp",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PauloHenrique993940/clone_.git"
+    "url": "https://github.com/PauloHenrique993940/clone_.git"
   },
-  "author": "",
+  "author": "Paulo Henrique Ferreira França <seu-email@example.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PauloHenrique993940/clone_/issues"
   },
   "homepage": "https://github.com/PauloHenrique993940/clone_#readme",
-  "description": "",
+  "keywords": [
+    "disneyplus",
+    "clone",
+    "gulp",
+    "sass",
+    "imagemin"
+  ],
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "browser-sync": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
