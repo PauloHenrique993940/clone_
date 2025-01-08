@@ -72,13 +72,23 @@
 }
 
 
-@media (max-width:  768px){
-    .hero{
+@media (max-width: 768px) {
+    .hero {
         background-image: url('/src/images/hero_tablet.jpg');
-        width: 100%;
-        background-position: center;
+        background-size: contain; /* Ajusta a imagem para cobrir toda a área */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita repetições */
+        width: 80%;
+        padding-top: 70vw; /* Altura proporcional à largura */
+        margin: 0 auto; /* Centraliza o contêiner no eixo horizontal */
+        box-sizing: border-box;
+    }
+
+    .hero__content{
+        padding-top: 50vw;
     }
 }
+
 
 
 @media (max-width: 320px) {
@@ -87,11 +97,11 @@
         width: 100%;
         background-size: cover; /* Adjusts the background image */
         background-position: center; /* Centers the image */
+        background-repeat: no-repeat;
+        
     }
     .hero__content {
-        width: 100%;
-        padding: 10px; /* Adds some spacing for smaller screens */
-        text-align: center;
+        padding-top: 50vw;
     }
 
     .hero__content__combos{

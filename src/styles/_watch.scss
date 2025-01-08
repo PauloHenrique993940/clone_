@@ -46,17 +46,8 @@
 @media (max-width: 768px) {
     .walpaper{
         display: block;
-        padding-left: 6%;
+        background-image: url('/src/images/fundo_rei_leao.png');
     }
 }
 
 
-@media (max-width: 320px){
-    .walpaper{
-        display: flex;
-        flex-direction: column;
-        background-image: url('/src/images/fundo_rei_leao_celular.png');
-        width: 100%;
-        height: auto;
-    }
-}

@@ -57,8 +57,16 @@
 @media (max-width: 768px) {
   .hero {
     background-image: url("/src/images/hero_tablet.jpg");
-    width: 100%;
-    background-position: center;
+    background-size: contain; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetições */
+    width: 80%;
+    padding-top: 70vw; /* Altura proporcional à largura */
+    margin: 0 auto; /* Centraliza o contêiner no eixo horizontal */
+    box-sizing: border-box;
+  }
+  .hero__content {
+    padding-top: 50vw;
   }
 }
 @media (max-width: 320px) {
@@ -67,6 +75,7 @@
     width: 100%;
     background-size: cover; /* Adjusts the background image */
     background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
   }
   .hero__content {
     width: 100%;
@@ -128,7 +137,7 @@
 }
 
 .button {
-  width: 100%;
+  width: 2;
   font-family: Arial, sans-serif;
   font-weight: 400;
   background-color: #040714;
@@ -188,6 +197,14 @@
   }
   .header__container__logo {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .header__container {
+    display: flex;
+    padding: 8px 36px;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .shows {
@@ -426,7 +443,7 @@ table {
 @media (max-width: 768px) {
   .walpaper {
     display: block;
-    padding-left: 6%;
+    background-image: url("/src/images/fundo_rei_leao.png");
   }
 }
 @media (max-width: 320px) {
