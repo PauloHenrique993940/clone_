@@ -9,20 +9,23 @@
     transition: background-color .5s ease;
     z-index: 1;
 
-    &--is-hidden{
+    &--is-hidden {
         background-color: transparent;
-        .header{
-            &__logo, &__links__item:first-child{
+
+        .header {
+
+            &__logo,
+            &__links__item:first-child {
                 opacity: 0;
                 visibility: hidden;
             }
         }
 
-        .header__logo{
+        .header__logo {
             opacity: 0;
         }
 
-        .header__links__item:first-child{
+        .header__links__item:first-child {
             opacity: 0;
 
         }
@@ -62,46 +65,49 @@
 
 }
 
-.dark{
+.dark {
     background-color: rgba($color: #000, $alpha: 0.8);
     border-color: $corTextoSecundario;
-    
+
 }
-.button:hover{
+
+.button:hover {
     background-color: rgb(187, 184, 184);
     color: #000000;
 }
-.button__event{
-    background-color: $corFundoButtonCombos;
+
+.button__event {
+    background-color: #ffd700;
 }
 
-.button__event:hover{
-    background-color: #0569ec;
+.button__event:hover {
+    background-color: transparent;
+    color: #fff;
 }
 
-.hidden{
+.hidden {
     visibility: hidden;
 }
 
-.header__links__item{
+.header__links__item {
     transition: opacity .5s ease;
 }
 
 
-@media (max-width: 320px){
-    .header{
+@media (max-width: 320px) {
+    .header {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        
+
     }
 
-    .header__container{
+    .header__container {
         display: flex;
         flex-direction: column;
     }
 
-    .button__event{
+    .button__event {
         background-color: $corFundoButtonCombos;
         width: 150px;
         padding: 0;
@@ -111,16 +117,48 @@
         padding: 5px;
     }
 
-    .header__container__logo{
+    .header__container__logo {
         width: 100%;
     }
 }
 
-@media (max-width: 768px){
-    
+@media (max-width: 768px) {
+
     .header__container {
         display: flex;
         padding: 8px 30px;
         align-items: center;
+    }
+}
+
+.harry-potter {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ffd700,
+        /* Dourado */
+        0 0 30px #ffd700,
+        0 0 40px #ffd700,
+        0 0 50px #ffd700;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #ffd700,
+            0 0 30px #ffd700,
+            0 0 40px #ffd700;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px #fff,
+            0 0 30px #ffd700,
+            0 0 40px #ffd700,
+            0 0 50px #ffd700;
     }
 }

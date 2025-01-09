@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PauloHenrique993940/clone_.git"
+    "url": "https://github.com/PauloHenrique993940/HarryPage.git"
   },
   "author": "Paulo Henrique Ferreira França <seu-email@example.com>",
   "license": "ISC",
@@ -29,7 +29,8 @@
     "gulp": "^5.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.81.0"
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.83.1"
   },
   "dependencies": {
     "browser-sync": "^3.0.3"

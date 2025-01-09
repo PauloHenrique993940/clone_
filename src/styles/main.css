@@ -1,8 +1,8 @@
 @charset "UTF-8";
 .hero {
   padding: 5.6vw;
-  min-height: 80vh;
-  background-image: url(/src/images/hero_desktop.jpeg);
+  height: 90vh;
+  background-image: url("/src/images/fundoHarry.jpeg");
   text-align: center;
   background-size: cover;
 }
@@ -43,7 +43,7 @@
   height: 60px;
   font-size: 18px;
   color: #f9f9f9;
-  background-color: #02d6e8;
+  background-color: #ffd700;
   border-radius: 6px;
   border-color: #02d6e8;
   border: 1px solid #02d6e8;
@@ -51,47 +51,13 @@
   text-transform: uppercase;
 }
 .hero__content__combos__combo .hero__combos__combo__btn:hover {
-  background-color: #096c8a;
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
   .hero {
-    background-image: url("/src/images/hero_tablet.jpg");
-    background-size: contain; /* Ajusta a imagem para cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetições */
-    width: 80%;
-    padding-top: 70vw; /* Altura proporcional à largura */
-    margin: 0 auto; /* Centraliza o contêiner no eixo horizontal */
-    box-sizing: border-box;
-  }
-  .hero__content {
-    padding-top: 50vw;
-  }
-}
-@media (max-width: 320px) {
-  .hero {
-    background-image: url("/src/images/hero_celular.jpeg");
-    width: 100%;
-    background-size: cover; /* Adjusts the background image */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat;
-  }
-  .hero__content {
-    width: 100%;
-    padding: 10px; /* Adds some spacing for smaller screens */
-    text-align: center;
-  }
-  .hero__content__combos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero__content__combos__combo img {
-    width: 100%;
-    display: flex;
+    background-color: transparent;
+    display: block;
   }
 }
 .header {
@@ -119,7 +85,7 @@
 
 .header__container {
   display: flex;
-  padding: 8px 36px;
+  padding: 8px 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -137,7 +103,6 @@
 }
 
 .button {
-  width: 2;
   font-family: Arial, sans-serif;
   font-weight: 400;
   background-color: #040714;
@@ -161,11 +126,12 @@
 }
 
 .button__event {
-  background-color: #02d6e8;
+  background-color: #ffd700;
 }
 
 .button__event:hover {
-  background-color: #0569ec;
+  background-color: transparent;
+  color: #fff;
 }
 
 .hidden {
@@ -202,9 +168,24 @@
 @media (max-width: 768px) {
   .header__container {
     display: flex;
-    padding: 8px 36px;
-    justify-content: space-between;
+    padding: 8px 30px;
     align-items: center;
+  }
+}
+.harry-potter {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700;
   }
 }
 .shows {
@@ -269,14 +250,6 @@
   display: none;
 }
 
-@media (max-width: 320px) {
-  .shows {
-    justify-content: space-between;
-  }
-  .shows__tabs__button {
-    font-size: 12px;
-  }
-}
 .plans {
   padding: 2vw 5.6vw;
 }
@@ -318,7 +291,7 @@
 }
 
 .plans__list__btn {
-  background-color: #096c8a;
+  background-color: #ffd700;
   border: none;
   padding: 10px;
   width: 200px;
@@ -419,19 +392,16 @@ table {
 .walpaper {
   padding: 5.6vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding-left: 50%;
   align-items: center;
-  background-image: url(/src/images/fundo_rei_leao.png);
   height: 60vw;
-}
-.walpaper img {
   width: 100%;
+  background-image: url("/src/images/reliquia2.jpg");
 }
 
 .watch-anywhere__text_container__walpaper {
   float: right;
+  display: flex;
 }
 .watch-anywhere__text_container__walpaper p {
   width: calc(100% - 5.6vw);
@@ -443,16 +413,16 @@ table {
 @media (max-width: 768px) {
   .walpaper {
     display: block;
-    background-image: url("/src/images/fundo_rei_leao.png");
-  }
-}
-@media (max-width: 320px) {
-  .walpaper {
-    display: flex;
-    flex-direction: column;
-    background-image: url("/src/images/fundo_rei_leao_celular.png");
+    padding-left: 0;
+    padding: 5.6vw;
+    height: 80vh;
     width: 100%;
-    height: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  div {
+    padding-top: 5%;
   }
 }
 .dispositivos {
@@ -510,7 +480,7 @@ table {
 }
 
 .faq__questions__item__question {
-  background-color: black;
+  background-color: #000000;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -624,14 +594,16 @@ table {
 
 @media (max-width: 768px) {
   .container {
+    display: block;
+    width: 100%;
+  }
+  .container__text {
+    padding-top: 20vh;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     width: 100%;
   }
   .container__text p {
     text-align: justify;
-    width: 100%;
   }
 }
 @font-face {
@@ -712,6 +684,5 @@ body {
 @media (max-width: 768px) {
   .watch-anywhere {
     display: block;
-    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
